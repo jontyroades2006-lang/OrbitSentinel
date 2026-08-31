@@ -1,17 +1,3 @@
-"""
-uncertainty.py — Turn raw ML error predictions into conjunction-relevant
-confidence figures.
-
-This module bridges data.py (orbit/TLE info) and model.py (the trained
-regressor) to answer: "how much do we trust this predicted closest-approach
-distance?"
-
-We combine the predicted position error of BOTH objects (root-sum-square,
-since the two errors are independent) into a combined miss-distance
-uncertainty, then convert that into a 0-100% confidence score using the
-ratio of predicted miss distance to combined uncertainty.
-"""
-
 from __future__ import annotations
 
 import math
