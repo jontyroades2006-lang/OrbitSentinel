@@ -1,18 +1,3 @@
-"""
-visualization.py — Turn propagated tracks into CZML packets for CesiumJS.
-
-CZML is Cesium's native time-dynamic scene description format, so instead
-of hand-rolling custom JSON that the frontend has to interpret, we emit
-proper CZML documents that Cesium's `CzmlDataSource` can load directly.
-Positions are expressed as time-tagged `cartographicDegrees` samples
-([iso_time, lon, lat, height_m, iso_time, ...]) which Cesium interpolates
-smoothly between.
-
-Everything returned is plain Python lists/dicts (JSON-compatible) — no
-Cesium-specific objects — so this module has zero frontend dependencies
-and can be unit tested headlessly.
-"""
-
 from __future__ import annotations
 
 from datetime import datetime
