@@ -1,10 +1,3 @@
-"""
-conjunction.py — OrbitSentinel conjunction calculations.
-
-This module contains orbital calculations only.
-Flask routes belong in main.py.
-"""
-
 from __future__ import annotations
 
 import math
