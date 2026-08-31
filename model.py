@@ -1,30 +1,3 @@
-"""
-model.py — Machine-learning model for propagation-uncertainty estimation.
-
-We want to answer: "given a TLE this old, for an orbit at this altitude /
-eccentricity / inclination, propagated this many hours into the future,
-how many km of position error should we expect from SGP4?"
-
-In production this would be trained on real historical archives (e.g.
-comparing TLEs issued a few days apart for the same object and measuring
-propagation divergence). For this hackathon prototype we don't have network
-access to a live TLE archive, so we generate a physically-motivated
-synthetic training set that reproduces well-documented SGP4 error behavior:
-
-  * Error grows roughly with propagation time span (worse for longer
-    look-aheads).
-  * Error grows faster for low-altitude objects (more atmospheric drag,
-    harder for a simplified drag model to track).
-  * Error grows with TLE age (stale mean elements).
-  * Error grows mildly with eccentricity (more dynamic orbit).
-  * Gaussian noise is added so the regressor has to generalize, not
-    memorize a formula.
-
-The trained model (a small Gradient Boosting regressor — explicitly NOT a
-deep-learning system, per project constraints) is cached to disk so it
-only needs to be trained once.
-"""
-
 from __future__ import annotations
 
 import os
