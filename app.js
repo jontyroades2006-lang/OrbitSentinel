@@ -1,8 +1,3 @@
-/* OrbitSentinel frontend
- * CesiumJS globe + control panels
- * Communicates with Flask API in backend/main.py
- */
-
 "use strict";
 
 const API_BASE = "";
