@@ -1,18 +1,3 @@
-"""
-risk.py — OrbitSentinel risk scoring.
-
-The score combines:
-
-    1. Miss distance
-    2. Relative velocity
-    3. Mission criticality
-    4. Prediction confidence
-
-The distance component uses a smooth exponential decay rather than
-a hard 100 km cutoff. This allows the What-If simulator to show
-meaningful risk changes even when the miss distance is >100 km.
-"""
-
 from __future__ import annotations
 
 import math
