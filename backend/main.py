@@ -1,20 +1,3 @@
-"""
-main.py — OrbitSentinel Flask API.
-
-Serves:
-    GET  /api/satellites
-    GET  /api/satellites/<id>
-    GET  /api/search?q=...
-    GET  /api/catalog/czml?hours=6
-    GET  /api/conjunction?a=<id>&b=<id>&hours=48
-    POST /api/whatif
-    GET  /api/model/info
-
-Run from project root:
-
-    python -m backend.main
-"""
-
 from __future__ import annotations
 
 import os
