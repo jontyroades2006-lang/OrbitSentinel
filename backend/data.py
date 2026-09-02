@@ -1,18 +1,3 @@
-"""
-data.py — TLE ingestion, satellite catalog, and SGP4 propagation.
-
-Responsibilities:
-  * Hold a small in-memory "catalog" of satellites (sample TLEs + metadata
-    such as operational status, population served, replacement cost).
-  * Parse TLE text into sgp4 Satrec objects.
-  * Propagate satellites to ECI position/velocity and to geodetic
-    lat/lon/alt (for Cesium) at arbitrary times.
-
-No database is used — this is a hackathon prototype. Everything lives in
-memory and is returned as plain dicts/lists so it is trivially JSON
-serializable for a web frontend.
-"""
-
 from __future__ import annotations
 
 import math
